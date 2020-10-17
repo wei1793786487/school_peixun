@@ -4,11 +4,9 @@ from flask import request
 import main
 import re
 
-
-
 @app.route('/<type>')
 def login(type):
-    if (type != 1 and type != 0):
+    if (type != "1" and type != "0"):
         return "请输入正确的参数"
     else:
         phone = request.args.get('phone')
