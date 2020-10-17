@@ -2,10 +2,10 @@ import getUtlis
 import logging
 logging.basicConfig(level=logging.INFO)
 
+
 # type 0 为签到 1为签退
 
 def doACtion(phone,type):
-
     logging.info("手机号为:{}".format(phone))
 
     # 手机验证码
@@ -40,7 +40,6 @@ def doACtion(phone,type):
     logging.info("最新一期时间:{}".format(time_))
     log_ = info['data']['curriculum']["log"]
     lat = info['data']['curriculum']["lat"]
-
     url=info["data"]["sfzhImgJust"]
 
     logging.info("curriculum_id为:{}，经纬度为:{},{}：".format(curriculum_id, log_,lat))
@@ -48,5 +47,4 @@ def doACtion(phone,type):
     sign_in = getUtlis.sign_in(curriculum_id, type_id,type,lat,log_,url)
     logging.info("返回信息:{}".format(sign_in["msg"]))
     return sign_in
-
 
