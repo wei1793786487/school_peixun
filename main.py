@@ -48,3 +48,4 @@ def doACtion(phone,type):
     logging.info("返回信息:{}".format(sign_in["msg"]))
     return sign_in
 
+# doACtion("19963309825","1")
